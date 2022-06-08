@@ -13,7 +13,6 @@ echo -e "$blue
 :::..:::::::::::::::......::::......:::..:::::..::..::::..::
 "
 }
-banner
 menu(){
 echo -e "$blue             ＞＞＞＞>>>＞$blue[Menu]$blue ＜<<<＜＜＜＜$blue"
 echo " "
@@ -39,6 +38,8 @@ then
 bash vuln.sh
 fi
 }
+banner
+menu
 scan() {
   if [[ -z $1 || -z $2 ]]; then
     echo "Usage: $0 <host> <port, ports, or port-range>"
