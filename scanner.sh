@@ -37,6 +37,7 @@ scan
 elif [ $optnz = "3" ];
 then
 bash vuln.sh
+fi
 }
 scan() {
   if [[ -z $1 || -z $2 ]]; then
