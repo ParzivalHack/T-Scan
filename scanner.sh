@@ -29,8 +29,7 @@ banner
 sleep 1
 echo -ne "\e[34m#Select host to ping (website.com)\e[34m: "
 read host
-ping $host.com
-done
+ping $host
 elif [ $optnz = "2" ];
 then
 banner
