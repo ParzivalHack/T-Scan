@@ -32,11 +32,11 @@ ping $host
 elif [ $optnz = "2" ];
 then
 banner
-echo -ne "#Type host name to scan"
+echo -ne "#Type host name to scan: "
 read host
-echo -ne "#Type port/port-range to scan"
+echo -ne "#Type port/port-range to scan: "
 read port
-bash scan.sh $host $port
+scan
 elif [ $optnz = "3" ];
 then
 bash vuln.sh
