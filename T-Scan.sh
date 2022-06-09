@@ -43,6 +43,7 @@ bash vuln.sh
 fi
 }
 banner
+menu
 scan() {
   if [[ -z $1 || -z $2 ]]; then
     echo "Usage: $0 <host> <port, ports, or port-range>"
