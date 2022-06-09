@@ -1,3 +1,6 @@
+HOME_DIR="$(cd "$(dirname "$0")" ; pwd -P)"
+BASHTER_VERSION="4.1"
+RELEASED_DATE="1 May 2019"
 function UrlSelector() {
 	WEBSITE="${1}"
 	URL="${2}"
