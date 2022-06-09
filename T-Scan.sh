@@ -32,6 +32,7 @@ ping $host
 elif [ $optnz = "2" ];
 then
 banner
+echo -e "Scan could take up to 5 min so be patient (press ESC to check the percentage of ports scanned)"
 echo -ne "#Type host name to scan (website.com): "
 read host
 nmap -sT -p- $host
