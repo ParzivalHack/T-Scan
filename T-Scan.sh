@@ -42,7 +42,7 @@ then
 banner
 echo -ne "Host (www.example.com): "
 read host3
-nmap -sV --script http-shellshock $host3
+nmap -sV -T4 -v --script=$PWD/ $host3
 fi
 }
 banner
