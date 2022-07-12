@@ -34,12 +34,16 @@ then
 banner
 echo -e "Scan could take up to 5 min so be patient (press ESC to check the percentage of ports scanned)"
 echo -ne "#Type host name to scan (website.com): "
-read host
-nmap -sT -p- $host
+read host2
+nmap -sT -p- $host2
 elif [ $optnz = "3" ];
 then
 banner
-python vuln.py
+echo -ne "Host: "
+read host3
+echo -ne "Port: "
+read port
+nmap -sV -p $port $host3
 fi
 }
 banner
