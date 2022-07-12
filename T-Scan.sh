@@ -38,7 +38,8 @@ read host
 nmap -sT -p- $host
 elif [ $optnz = "3" ];
 then
-bash vuln.sh
+banner
+python vuln.py
 fi
 }
 banner
