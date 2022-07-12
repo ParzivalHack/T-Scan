@@ -32,18 +32,17 @@ ping $host
 elif [ $optnz = "2" ];
 then
 banner
-echo -e "Scan could take up to 5 min so be patient (press ESC to check the percentage of ports scanned)"
-echo -ne "#Type host name to scan (website.com): "
+echo -ne "Host (www.example.com): "
 read host2
-nmap -sT -p- $host2
+echo -ne "Port: "
+read port
+nmap -sV -p $port $host2
 elif [ $optnz = "3" ];
 then
 banner
-echo -ne "Host: "
+echo -ne "Host (www.example.com): "
 read host3
-echo -ne "Port: "
-read port
-nmap -sV -p $port $host3
+nmap -sV --script http-shellshock $host3
 fi
 }
 banner
